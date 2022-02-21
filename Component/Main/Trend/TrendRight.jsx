@@ -38,7 +38,7 @@ const TrendRight = () => {
                                     lineHeight: "22px",
                                     letterSpacing: "0.065em",
                                     fontFamily: "Poppins, Sans-serif",
-                                    fontWeight: "600",
+                                    fontWeight: "500",
                                     padding: "0"
                                 }}
                             >

@@ -1,5 +1,6 @@
 import OttImages from "../../OttImages.json";
 import { Container, Row, Col, Box } from "react-bootstrap";
+import { base_url } from "../../utils/config";
 const OttFilter = () => {
   const ImgBox = ({ image }) => {
     const Design = (
@@ -9,7 +10,7 @@ const OttFilter = () => {
           borderBottom: "1px solid #ccc",
           cursor: "pointer"
         }}>
-          <img src={image.logo} className="w-50 image" />
+          <img src={base_url + '/' + image.logo} className="w-50 image" />
         </div>
       </>
     );

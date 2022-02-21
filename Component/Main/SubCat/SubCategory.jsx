@@ -81,7 +81,7 @@ const SubCategory = () => {
         </Row>
 
         <Row>
-          <Stack direction="horizontal" gap={3} style={{ padding: "20px 10px" }}>
+          <Stack direction="horizontal" gap={3} style={{ padding: "10px" }}>
             {SubCatData.map((item) => {
               return <Code data={item} />;
             })}

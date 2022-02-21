@@ -1,7 +1,15 @@
 import { Col, Card, Stack, Image } from "react-bootstrap";
 import UpdatedTodayData from "../../../UpdatedTodayData.json";
+import router from 'next/router';
 
 const UpdatedTodatRight = () => {
+
+  const goPost = () => {
+    // alert('hi');
+    // return;
+    router.push('/Post/stranger-things-season-4-release-date-cast-spoilers-trailer-and-everything-you-need-to-know');
+  }
+
   const Code = ({ Data }) => {
     const Design = (
       <>
@@ -32,14 +40,16 @@ const UpdatedTodatRight = () => {
 
             <Card.Body style={{ padding: "9px" }}>
               <Card.Text
+                onClick={goPost}
                 style={{
                   color: "#00000",
                   fontSize: "14px",
                   lineHeight: "22px",
                   letterSpacing: "0.065em",
                   fontFamily: "Poppins, Sans-serif",
-                  fontWeight: "600",
-                  padding: "0"
+                  fontWeight: "500",
+                  padding: "0",
+                  cursor: 'pointer'
                 }}
               >
                 {Data.desc}
@@ -58,7 +68,7 @@ const UpdatedTodatRight = () => {
     <>
       <Col>
         {UpdatedTodayData.map((item) => {
-          return <Code Data={item} />;
+          return <Code onClick={goPost} Data={item} />;
         })}
       </Col>
     </>

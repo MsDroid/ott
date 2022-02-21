@@ -1,6 +1,7 @@
 import React from 'react';
 import { Row, Col, Container, Card, Button, Stack } from "react-bootstrap";
 import SubCatData from "../../../SubCatData.json";
+import { base_url } from '../../../utils/config';
 
 
 const FooterSlider = () => {
@@ -24,7 +25,7 @@ const FooterSlider = () => {
                     >
                         <Card.Img
                             variant="top"
-                            src={data.piclink}
+                            src={base_url + '/' + data.piclink}
                             style={{
                                 borderTopLeftRadius: "10px",
                                 borderTopRightRadius: "10px",
