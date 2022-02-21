@@ -16,9 +16,15 @@ import { ImYoutube } from "react-icons/im";
 import { FaTwitter } from "react-icons/fa";
 import { BsInstagram } from "react-icons/bs";
 import Dummy from "../../Dummy.json";
+import { base_url } from "../../utils/config";
+import router from 'next/router';
 
 const Header = () => {
   const [active, setActive] = useState(false);
+
+  const goHome = () => {
+    router.push('/');
+  }
 
   const SubCatOffcanvas = ({ menu }) => {
     const MenuHeader = (
@@ -45,19 +51,27 @@ const Header = () => {
           position: "fixed",
           zIndex: "999999",
           boxShadow: "0 0 2px 2px #ccc",
-          top: "0"
+          top: "0",
+
         }}
       >
         <Row>
-          <Navbar bg="light" expand={false}>
+          <Navbar bg="light" expand={false} style={{
+            backgroundColor: "#ffffff",
+            boxShadow: "6px 1px 15px 0px #ccc",
+            marginTop: "-14px",
+            height: "75px"
+
+          }}>
             {/* start Menubar and logo */}
             <Col md={3}>
               <Navbar.Toggle aria-controls="offcanvasNavbar" style={{ marginLeft: "30px" }} />
 
-              <Navbar.Brand href="/" className="p-4">
+              <Navbar.Brand href="/" style={{ cursor: 'pointer' }} className="p-4">
                 <img
+                  onClick={goHome}
                   alt=""
-                  src="logo.png"
+                  src={base_url + '/logo.png'}
                   width="70px"
                   className="d-inline-block "
                 />
@@ -67,9 +81,9 @@ const Header = () => {
 
             {/* start Searchbar */}
 
-            <Col md={4}>
+            <Col md={6}>
               <div style={{ backgroundColor: "#e8e8e8", borderRadius: "4px" }}>
-                <Form className="d-flex">
+                <Form className="d-flex" style={{ alignItems: "baseline" }}>
                   <Button
                     style={{
                       backgroundColor: "#e8e8e8",
@@ -78,6 +92,7 @@ const Header = () => {
                       color: "#887e7e",
                       fontSize: "20px",
                       boxShadow: "none",
+                      height: "15px"
                     }}
                   >
                     <BiSearchAlt2 />
@@ -101,9 +116,9 @@ const Header = () => {
             {/* End Searchbar */}
 
             {/* start trends logo and text */}
-            <Col md={3} className="p-4">
+            <Col md={2} className="p-4">
               <DiCodeigniter style={{
-                fontSize: "25px",
+                fontSize: "17px",
                 color: "red",
                 cursor: "pointer"
               }} />
@@ -113,8 +128,9 @@ const Header = () => {
                   fontFamily: "Poppins, Sans-serif",
                   fontWeight: "700",
                   color: "#262626",
-                  fontSize: "14px",
-                  cursor: "pointer"
+                  fontSize: "12px",
+                  cursor: "pointer",
+                  letterSpacing: "1px"
                 }}
               >
                 OTT Trends
@@ -123,14 +139,13 @@ const Header = () => {
             {/* End trends logo and text */}
 
             {/* Start Social media icon */}
-            <Col md={2} style={{
-              display: "flex",
-              justifyContent: "space-evenly"
+            <Col md={1} style={{
+              textAlign: "right"
             }}>
               <ImYoutube
                 style={{
                   color: "red",
-                  fontSize: "38px",
+                  fontSize: "27px",
                   padding: "3px",
                   marginLeft: "5px",
                   cursor: "pointer"
@@ -139,7 +154,7 @@ const Header = () => {
               <FaTwitter
                 style={{
                   color: "#1C9CEA",
-                  fontSize: "38px",
+                  fontSize: "27px",
                   padding: "3px",
                   marginLeft: "10px",
                   cursor: "pointer"
@@ -148,7 +163,7 @@ const Header = () => {
               <BsInstagram
                 style={{
                   color: "#F54F56",
-                  fontSize: "38px",
+                  fontSize: "27px",
                   padding: "3px",
                   marginLeft: "10px",
                   cursor: "pointer"

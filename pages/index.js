@@ -8,6 +8,7 @@ import "@fontsource/montserrat";
 import "@fontsource/poppins";
 import Testslider from "./Testslider";
 import Footer from '../Component/Footer/Footer';
+import MobileHeader from "../Component/Header/MobileHeader";
 
 
 export default function Home() {
@@ -19,8 +20,8 @@ export default function Home() {
       </Head>
 
       <Header />
-      <Category />
 
+      <Category />
 
       <Main />
 

@@ -57,6 +57,7 @@ const TrendLeft = () => {
         );
         return Design;
     };
+
     const Design = (
         <>
             <Col
@@ -90,7 +91,7 @@ const TrendLeft = () => {
                                 lineHeight: "22px",
                                 letterSpacing: "0.065em",
                                 fontFamily: "Poppins, Sans-serif",
-                                fontWeight: "600",
+                                fontWeight: "500",
                             }}
                         >
                             Bobby Deol's Aashram 3 release date and Bhagyashree's daughter

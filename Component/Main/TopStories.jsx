@@ -42,15 +42,14 @@ const TopStories = () => {
   const Design = (
     <>
       <Container>
-        {/* Start Top Stories Slider */}
         <Row>
-          <Col sx={8} style={{ fontFamily: "Montserrat" }}>
+          <Col xs={12} style={{ fontFamily: "Poppins, Sans-serif" }}>
             <h3 style={{
               fontWeight: "600",
               letterSpacing: ".5px",
               textTransform: "uppercase",
               fontSize: "24px",
-              wordSpacing: "2px",
+              wordSpacing: "2px"
             }}
             >
               Top Stories

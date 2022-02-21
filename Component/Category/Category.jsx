@@ -16,7 +16,7 @@ const Category = () => {
 
   const Design = (
     <>
-      <Container fluid style={{ marginTop: "90px", backgroundColor: "#f2f2f2" }} >
+      <Container fluid style={{ marginTop: "62px", backgroundColor: "#f2f2f2" }} >
         <Row>
           <Col
             style={{
@@ -28,6 +28,8 @@ const Category = () => {
             <Swiper
               spaceBetween={10}
               slidesPerView={10}
+              navigation
+              pagination={{ clickable: true }}
               onSlideChange={() => console.log("slide change")}
               onSwiper={(swiper) => console.log(swiper)}
               style={{ padding: "5px" }}
@@ -53,7 +55,9 @@ const Category = () => {
                           padding: "5px 10px",
                           width: "100%",
                           marginTop: "5px",
-                          letterSpacing: "0.7px"
+                          letterSpacing: "0.7px",
+                          backgroundColor: "#fff",
+                          color: "#000"
 
                         }}
                       >

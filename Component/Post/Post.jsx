@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom'
 import { Container, Row, Col, Breadcrumb } from "react-bootstrap";
 import OttFilter from '../Main/OttFilter';
 import { FaGreaterThan } from "react-icons/fa";
@@ -6,13 +7,17 @@ import { BsFacebook } from "react-icons/bs";
 import { RiWhatsappFill } from "react-icons/ri";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import FooterSlider from './Comps/FooterSlider';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee, faAngleRight } from '@fortawesome/free-solid-svg-icons'
+import { base_url } from '../../utils/config';
+
 
 
 const Post = () => {
     return (
         <>
-            <Container fluid style={{ paddingTop: "30px", backgroundColor: "#f2f2f2" }}>
-                <Row className="shadow-sm w-100" style={{ padding: "20px 20px 20px 70px" }}>
+            <Container style={{ backgroundColor: "#fff", marginTop: "20px" }}>
+                <Row className="shadow-sm w-100" >
                     {/* ================================================================================ */}
                     {/* Left main section start */}
                     {/* ================================================================================= */}
@@ -39,9 +44,12 @@ const Post = () => {
                                     <span><a href="/">Home</a></span>
                                     <span style={{
                                         fontSize: "14px",
-                                        marginRight: "5px"
+                                        marginRight: "5px",
+                                        fontFamily: "Poppins, Sans-serif",
+                                        fontWeight: "600"
+
                                     }}>
-                                        <FaGreaterThan />
+                                        <FontAwesomeIcon icon={faAngleRight} />
                                     </span>
                                     <span>
                                         <a href="/">
@@ -51,12 +59,17 @@ const Post = () => {
 
                                     <span style={{
                                         fontSize: "14px",
-                                        marginRight: "5px"
+                                        marginRight: "5px",
+                                        fontFamily: "Poppins, Sans-serif",
+                                        fontWeight: "600"
                                     }}>
-                                        <FaGreaterThan />
+                                        <FontAwesomeIcon icon={faAngleRight} />
                                     </span>
 
-                                    <span>
+                                    <span style={{
+                                        fontFamily: "Poppins, Sans-serif",
+
+                                    }}>
                                         <a active>Trending Today</a>
                                     </span>
                                 </div>
@@ -66,14 +79,18 @@ const Post = () => {
                                     fontSize: "35px",
                                     fontWeight: "600",
                                     textTransform: "capitalize",
-                                    margin: "15px 5px"
+                                    margin: "15px 5px",
+                                    letterSpacing: "1px",
+                                    fontFamily: "Poppins, Sans-serif"
+
                                 }}>
                                     Stranger Things season 4 release date, cast, spoilers, trailer and everything you need to know
                                 </h1>
                                 <p style={{
                                     margin: "0 5px",
                                     fontWeight: "600",
-                                    color: "#897f7f"
+                                    color: "#897f7f",
+                                    fontFamily: "Poppins, Sans-serif",
                                 }}>
                                     By Santosh Mishra | Updated on 26th Jan, 2022
                                 </p>
@@ -81,17 +98,17 @@ const Post = () => {
                             <Row className="blog-desc">
                                 <div className="img-wrapper">
                                     <img
-                                        src="1.jpg"
+                                        src={base_url + '/' + '1.jpg'}
                                         alt=""
-                                        style={{ margin: "20px 0px" }}
+                                        style={{ margin: "20px 0px", width: "100%" }}
                                     />
                                 </div>
-                                <p>
+                                <p style={{ fontFamily: "Poppins, Sans-serif" }}>
                                     As of January 2022, there's still no news on when Stranger Things 4 will
                                     be released beyond that previously-stated Summer 2022 window.
                                     However, filming has wrapped, so hopefully it's not too far away now.
                                 </p>
-                                <p>
+                                <p style={{ fontFamily: "Poppins, Sans-serif" }}>
                                     The series wouldn't be the show it is without its colourful, l
                                     arger-than-life cast, so expect this lot back on your screens once again:
                                     Eleven (Millie Bobby Brown), Mike (Finn Wolfhard), Lucas (Caleb
@@ -99,7 +116,7 @@ const Post = () => {
                                     Sink), Steve (Joe Keery), Nancy (Natalia Dyer), Jonathan (Charlie Heaton),
                                     Robin (Maya Hawke) and Joyce (Winona Ryder), among others.
                                 </p>
-                                <p>
+                                <p style={{ fontFamily: "Poppins, Sans-serif" }}>
                                     We all now know that David Harbour will be returning as Hopper, despite
                                     that seemingly tragic end to season three. Chatting to Total Film,
                                     Harbour explained that his character "had to change" and "resurrect
@@ -107,18 +124,18 @@ const Post = () => {
                                     The same guy but in a different vein. It's a very cool thing to be able to
                                     play."
                                 </p>
-                                <p>
+                                <p style={{ fontFamily: "Poppins, Sans-serif" }}>
                                     While it's still unclear how his character survived, Harbour has revealed
                                     that season four will reveal more of his backstory in a call back to season
                                     two where Eleven found boxes in Hopper's attic labelled "dad", "Vietnam"
                                     and "New York".
                                 </p>
-                                <p>
+                                <p style={{ fontFamily: "Poppins, Sans-serif" }}>
                                     Speaking at Liverpool Comic-Con, the actor said: "In season four we will
                                     give you a big, huge reveal about Hopper's backstory, which we haven't
                                     really told you about... we're gonna express it in a big way.
                                 </p>
-                                <p>
+                                <p style={{ fontFamily: "Poppins, Sans-serif" }}>
                                     The series wouldn't be the show it is without its colourful, l
                                     arger-than-life cast, so expect this lot back on your screens once again:
                                     Eleven (Millie Bobby Brown), Mike (Finn Wolfhard), Lucas (Caleb
@@ -126,7 +143,7 @@ const Post = () => {
                                     Sink), Steve (Joe Keery), Nancy (Natalia Dyer), Jonathan (Charlie Heaton),
                                     Robin (Maya Hawke) and Joyce (Winona Ryder), among others.
                                 </p>
-                                <p>
+                                <p style={{ fontFamily: "Poppins, Sans-serif" }}>
                                     We all now know that David Harbour will be returning as Hopper, despite
                                     that seemingly tragic end to season three. Chatting to Total Film,
                                     Harbour explained that his character "had to change" and "resurrect
@@ -175,7 +192,8 @@ const Post = () => {
                             letterSpacing: ".5px",
                             textTransform: "uppercase",
                             fontSize: "24px",
-                            wordSpacing: "2px"
+                            wordSpacing: "2px",
+                            fontFamily: "Poppins, Sans-serif"
                         }}
                         >
                             Share this post
@@ -218,10 +236,12 @@ const Post = () => {
                         <span style={{
                             fontSize: "25px",
                             marginRight: "20%",
-                            fontWeight: "600"
+                            fontWeight: "600",
+                            fontFamily: "Poppins, Sans-serif",
                         }}>Discussions on this Post</span>
                         <span style={{
-                            fontSize: "18px"
+                            fontSize: "18px",
+                            fontFamily: "Poppins, Sans-serif"
                         }}>299 Comments</span>
                     </Col>
                     <Col md={3}></Col>
@@ -244,7 +264,7 @@ const Post = () => {
                                 padding: "0"
                             }}
                             >
-                                <img src="man.png" alt="" style={{ width: "45px" }} />
+                                <img src={base_url + '/' + 'man.png'} alt="" style={{ width: "45px" }} />
                             </Col>
                             <Col md={9} style={{
 
@@ -257,20 +277,23 @@ const Post = () => {
                                     padding: "5px",
                                     boxShadow: "0 0 2px 1px #ccc",
                                     backgroundColor: "#f2f2f2",
-                                    color: "#7a7676"
+                                    color: "#7a7676",
+                                    fontFamily: "Poppins, Sans-serif"
                                 }} />
                             </Col>
                             <Col md={2}>
                                 <button style={{
                                     backgroundColor: "#313131",
                                     padding: "9px",
-                                    color: "white"
+                                    color: "white",
+                                    borderRadius: "5px",
                                 }}>Submit</button>
                             </Col>
                         </Row>
                     </Col>
                     <Col md={3}></Col>
                 </Row>
+
 
                 {/* comment box */}
                 <Row>
@@ -289,14 +312,24 @@ const Post = () => {
                                 padding: "15px"
                             }}
                             >
-                                <img src="man.png" alt="" style={{ width: "45px" }} />
+                                <img src={base_url + '/' + 'man.png'} alt="" style={{ width: "45px" }} />
                             </Col>
                             <Col md={10} style={{
-
+                                fontFamily: "Poppins, Sans-serif"
                             }}
                             >
-                                <h3>Nikhil Kumar</h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and
+                                <h3 style={{
+                                    fontSize: "16px",
+                                    fontWeight: '600',
+                                    letterSpacing: "1px",
+                                    textTransform: "uppercase"
+                                }}
+                                >Nikhil Kumar</h3>
+                                <p style={{
+                                    fontSize: "14px",
+                                    letterSpacing: "1px",
+                                    lineHeight: "19px"
+                                }}>Lorem Ipsum is simply dummy text of the printing and
                                     typesetting industry. Lorem Ipsum has been the industry's
                                     standard dummy text ever since the 1500s, when an
                                     unknownprinter took a galley of type and scrambled
@@ -304,7 +337,9 @@ const Post = () => {
                                     It has survived not only.
                                 </p>
                                 <span style={{
-                                    color: "#7a7676"
+                                    color: "#7a7676",
+                                    fontFamily: "Poppins, Sans-serif",
+                                    fontSize: "12px"
                                 }}>3 Days Ago</span>
                             </Col>
 
@@ -330,19 +365,31 @@ const Post = () => {
                                 padding: "15px"
                             }}
                             >
-                                <img src="man.png" alt="" style={{ width: "45px" }} />
+                                <img src={base_url + '/' + 'man.png'} alt="" style={{ width: "45px" }} />
                             </Col>
                             <Col md={10} style={{
-
+                                fontFamily: "Poppins, Sans-serif"
                             }}
                             >
-                                <h3>Manoranjan Singh</h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and
+                                <h3 style={{
+                                    fontSize: "16px",
+                                    fontWeight: '600',
+                                    letterSpacing: "1px",
+                                    textTransform: "uppercase"
+                                }}
+                                >Manoranjan Singh</h3>
+                                <p style={{
+                                    fontSize: "14px",
+                                    letterSpacing: "1px",
+                                    lineHeight: "19px"
+                                }}>Lorem Ipsum is simply dummy text of the printing and
                                     typesetting industry. Lorem Ipsum has been the industry's
                                     standard dummy text ever since the.
                                 </p>
                                 <span style={{
-                                    color: "#7a7676"
+                                    color: "#7a7676",
+                                    fontFamily: "Poppins, Sans-serif",
+                                    fontSize: "12px"
                                 }}>3 Days Ago</span>
                             </Col>
 
